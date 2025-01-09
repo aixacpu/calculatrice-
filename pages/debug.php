@@ -1,8 +1,14 @@
-<?php
-$pageTitle = "DEBUG";
-include 'header.php';
-echo "<pre>";
-print_r($_SESSION); // Affiche toutes les données de session
-echo "</pre>";
-include 'footer.php';
-?>
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DEBUG</title>
+    <link rel="stylesheet" href="/Citecalculatrice/css/style.css">
+</head>
+<body>
+    <?php include 'header.php'; ?>
+    <h1>Sessions Actuelles (DEBUG)</h1>
+    <pre><?php print_r($_SESSION); ?></pre>
+    <?php include 'footer.php'; ?>
+</body>
+</html>

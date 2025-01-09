@@ -1,26 +1,25 @@
-<?php
-session_start(); 
+<<?php 
+session_start(); // Démarre ou continue la session utilisateur
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Citecalculatrice/css/style.css">
-    <title><?php echo $pageTitle ?? "Site PHP"; ?></title>
-</head>
-<body>
-    <header>
-        <nav>
+<nav>
+    <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="/Citecalculatrice/pages/debug.php">DEBUG</a></li>
+        <li><a href="/Citecalculatrice/pages/reset.php">RESET</a></li>
+        <?php if (isset($_SESSION['user'])): ?>
+            <li><a href="profile.php">Mon Profile</a></li>
+            <li><a href="/Citecalculatrice/pages/logout.php">Logout</a></li>
+        <?php else: ?>
+            <li><a href="/Citecalculatrice/pages/login.php">Login</a></li>
+        <?php endif; ?>
+        <li>
+            <a href="#">Calculatrice</a>
             <ul>
-                <li><a href="home.php" <?php if ($pageTitle == "Home") echo 'class="active"'; ?>>Home</a></li>
-                <?php if (isset($_SESSION['user'])): ?>
-                    <li><a href="debug.php" <?php if ($pageTitle == "DEBUG") echo 'class="active"'; ?>>Debug</a></li>
-                    <li><a href="reset.php" <?php if ($pageTitle == "RESET") echo 'class="active"'; ?>>Reset</a></li>
-                    <li><a href="logout.php">Logout</a></li>
-                <?php else: ?>
-                    <li><a href="login.php" <?php if ($pageTitle == "Login") echo 'class="active"'; ?>>Login</a></li>
-                <?php endif; ?>
+                <li><a href="/Citecalculatrice/pages/addition.php">Addition</a></li>
+                <li><a href="/Citecalculatrice/pages/soustraction.php">Soustraction</a></li>
+                <li><a href="/Citecalculatrice/pages/multiplication.php">Multiplication</a></li>
+                <li><a href="/Citecalculatrice/pages/division.php">Division</a></li>
             </ul>
-        </nav>
-    </header>
+        </li>
+    </ul>
+</nav>
