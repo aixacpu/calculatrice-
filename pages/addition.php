@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error = "Veuillez entrer des nombres valides.";
     }
 }
-?>bonjour
+?>
 <!DOCTYPE html>
 <html>
 <head>
