@@ -9,7 +9,7 @@ if (!isset($_SESSION['user'])) {
 <html>
 <head>
     <title>Mon Profile</title>
-    <link rel="stylesheet" href="/Citecalculatrice/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <?php include 'header.php'; ?>

@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include 'functions/functionsMath.php';
+include '../functions/functionsMath.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $num1 = filter_input(INPUT_POST, 'num1', FILTER_VALIDATE_FLOAT);
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html>
 <head>
     <title>Addition</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <?php include 'header.php'; ?>
