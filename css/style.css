@@ -6,25 +6,67 @@ body {
     text-align: center;
 }
 
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
 nav ul {
     list-style-type: none;
-    background-color: #333;
-    padding: 10px;
     margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
+    gap: 20px; 
+}
+
+nav ul li {
+    position: relative; 
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+nav ul li:not(:last-child)::after {
+    content: "|"; 
+    color: white;
+    margin-left: 10px;
 }
 
 nav ul li ul {
-    display: none;
+    display: none; 
     position: absolute;
-    background-color: #333;
+    background-color: #444; 
     padding: 10px;
     border-radius: 5px;
+    top: 100%; 
+    left: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 nav ul li:hover ul {
-    display: block;
+    display: block; 
+}
+
+nav ul li ul li {
+    margin: 5px 0; 
+}
+
+nav ul li ul li a {
+    padding: 10px;
+    display: block; 
+    color: white;
+    text-align: left; 
 }
 
 footer {
@@ -34,6 +76,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    text-align: center;
 }
 
 form {

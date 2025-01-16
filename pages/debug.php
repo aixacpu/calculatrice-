@@ -8,7 +8,7 @@
 <body>
     <?php include 'header.php'; ?>
     <h1>Sessions Actuelles (DEBUG)</h1>
-    <pre><?php print_r($_SESSION); ?></pre>
+    <pre><?php var_dump($_SESSION); ?></pre>
     <?php include 'footer.php'; ?>
 </body>
 </html>

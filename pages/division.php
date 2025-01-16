@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $result = division($num1, $num2);
         $_SESSION['results'][] = "Division : $num1 / $num2 = $result";
     } else {
-        $error = "Veuillez entrer des nombres valides.";
+        $error = "Veuillez entrer des nombres valides."; 
     }
 }
 ?>
