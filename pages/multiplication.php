@@ -23,9 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <?php include 'header.php'; ?>
     <h1>Page de Multiplication</h1>
     <form method="POST">
-        <input type="text" name="num1" placeholder="Nombre 1" required>
+        <input type="text" name="num1" placeholder="Number 1" required>
         <span>*</span>
-        <input type="text" name="num2" placeholder="Nombre 2" required>
+        <input type="text" name="num2" placeholder="Number 2" required>
         <button type="submit">Calculer</button>
     </form>
     <?php if (isset($result)) echo "<p>Résultat: $result</p>"; ?>

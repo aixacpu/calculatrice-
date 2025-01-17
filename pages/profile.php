@@ -13,19 +13,30 @@ if (!isset($_SESSION['user'])) {
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <h1>Bienvenue, <?php echo $_SESSION['user']; ?> !</h1>
-    <h2>Historique des opérations :</h2>
-    <ul>
-        <?php 
-        if (isset($_SESSION['results'])) {
-            foreach ($_SESSION['results'] as $res) {
-                echo "<li>$res</li>";
-            }
-        } else {
-            echo "<li>Aucune opération effectuée.</li>";
-        }
-        ?>
-    </ul>
+    <div class="content">
+        <div class="card">
+            <h1>Bienvenue, <?php echo $_SESSION['user']; ?> !</h1>
+            <h2>Historique des opérations :</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Résultat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php 
+                    if (isset($_SESSION['results'])) {
+                        foreach ($_SESSION['results'] as $res) {
+                            echo "<tr><td>$res</td></tr>";
+                        }
+                    } else {
+                        echo "<tr><td>Aucune opération effectuée.</td></tr>";
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
     <?php include 'footer.php'; ?>
 </body>
 </html>
